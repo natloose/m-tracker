@@ -2,7 +2,7 @@
 
 This project tracks macro intake. Making it nice and easy to track your day to day food consumption. 
 
-Suitable for anybody who wants to keep on track what they're eating in an easy to view format.
+Suitable for anybody who wants to keep track of what they're eating in an easy to view format.
 
 This project differs from mainstream "trackers" as it focuses more on the macros rather than the calorie intake. 
 
