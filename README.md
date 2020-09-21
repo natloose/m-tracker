@@ -19,3 +19,9 @@ Done!
 
 
 ![AccountLogin](https://user-images.githubusercontent.com/60553621/93750508-7b270180-fbf3-11ea-958f-8c6ca7953a4f.JPG)
+
+
+![Login](https://user-images.githubusercontent.com/60553621/93752091-0dc8a000-fbf6-11ea-89e4-c5352a28e44e.JPG)
+
+
+![Register](https://user-images.githubusercontent.com/60553621/93752121-18833500-fbf6-11ea-90b2-b109f887167e.JPG)
