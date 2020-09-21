@@ -24,4 +24,6 @@ Done!
 ![Login](https://user-images.githubusercontent.com/60553621/93752091-0dc8a000-fbf6-11ea-89e4-c5352a28e44e.JPG)
 
 
-![Register](https://user-images.githubusercontent.com/60553621/93752121-18833500-fbf6-11ea-90b2-b109f887167e.JPG)
+![Register](https://user-images.githubusercontent.com/60553621/93752317-6730cf00-fbf6-11ea-948f-433a665d7e20.JPG)
+
+
