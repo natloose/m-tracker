@@ -16,3 +16,6 @@ e.g - Chicken Breast,  Total Weight 500g, Protein 100g, Carbohydrates 0g, Fat 5.
 3. Now that you've added to your day you can see your daily macro count so far plus a percentage to goal display to the right handside in the "Daily Information" section. 
 
 Done!
+
+
+![Login/Register Screen](C:\Users\Conor\OneDrive\Pictures\Account Login.png
