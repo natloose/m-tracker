@@ -18,4 +18,4 @@ e.g - Chicken Breast,  Total Weight 500g, Protein 100g, Carbohydrates 0g, Fat 5.
 Done!
 
 
-![Login/Register Page](Pictures\AccountLogin.PNG)
+![AccountLogin](https://user-images.githubusercontent.com/60553621/93750508-7b270180-fbf3-11ea-958f-8c6ca7953a4f.JPG)
