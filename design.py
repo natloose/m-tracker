@@ -39,7 +39,7 @@ def register_screen():
 
     # User instructions
     Label(reg_screen, text="", bg="white").pack()
-    Label(reg_screen, text="Register", bg="white", height="1", font=("verdana", 19)).pack()
+    Label(reg_screen, text="Register", bg="white", height="1", font=("verdana", 19), fg="black").pack()
     Label(reg_screen, text="", bg="white").pack()
 
     # Username Label

@@ -4,14 +4,6 @@ import sqlite3
 from tkinter import *
 from tkcalendar import *
 import pandas as pd
-global gram_amount
-global prott
-global carbss
-global fatss
-global final_p
-global final_c
-global final_f
-global item_added_text
 
 
 def create_database():
@@ -32,7 +24,6 @@ def create_database():
     conn.commit()
     # Close Connection (optional, will close anyway)
     conn.close()
-
 
 create_database()
 
@@ -301,7 +292,7 @@ def home_page():
     Label(left_frame, text="", bg="#e0e0d1").pack()
     Label(left_frame, text="New", font=("calibri", 14), bg="#e0e0d1").pack()
 
-    create_food_button = Button(left_frame, text="Create", bg="#b3cccc", command=addNewMeal, width=20, height=2)
+    create_food_button = Button(left_frame, text="Create Meal", bg="#b3cccc", command=addNewMeal, width=20, height=2)
     create_food_button.configure(font=("calibri", 11))
     create_food_button.pack(padx=10)
     Label(left_frame, text="Create a meal or individual food", bg="#e0e0d1").pack()
@@ -313,7 +304,7 @@ def home_page():
     right_frame = Frame(root, width=510, height=200, bg="white")
     right_frame.pack(fill="both")
 
-    Label(right_frame, text="Select View Date", bg="white").pack(padx=2, pady=2)
+    Label(right_frame, text="Select View Date", bg="white").pack(padx=2, pady=5)
 
     global daily_date
     global ent
