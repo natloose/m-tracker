@@ -1,4 +1,3 @@
-from tkinter import *
 import os
 from home import *
 
@@ -7,23 +6,23 @@ def login_register_screen():
 
     global login
 
+    # Create Login/Register window
     login = Tk()
     login.geometry("250x300+850+350")
     login.title("Account Login")
     login.configure(bg="white")
     login.iconbitmap("c:/users/Conor/OneDrive/Pictures/Camera Roll/food.ico")
 
-    # Form Label
+    # Form Login/Register Label
     Label(text="", height="1", bg="white").pack()
     Label(text="Login or Register", bg="white", width=200, height="2", font=("Calibri", 13), fg="black").pack()
     Label(text="", height="2", bg="white").pack()
 
-    # Login Button
+    # Click to Login Button
     Button(text="Login", height="2", width="30", bg="lightgreen", command=login_screen).pack()
     Label(text="", height="2", bg="white").pack()
 
-    # Register Button
-    # Register Button
+    # Click to Register Button
     Button(text="Register", height="2", width="30", bg="#EBEB28", command=register_screen).pack()
 
     login.mainloop()
@@ -31,6 +30,7 @@ def login_register_screen():
 
 def register_screen():
 
+    # Create register window
     reg_screen = Tk()
     reg_screen.geometry("300x290+830+420")
     reg_screen.title("Register")
@@ -61,6 +61,8 @@ def register_screen():
     Label(reg_screen, text="", bg="white", height=1).pack()
 
     def register_user_onto_file():
+
+        # Adds user to current user files
         file = open("Usernames/" + username.get(), "w")
         file.write(username.get())
         file.write("\n")
@@ -68,6 +70,7 @@ def register_screen():
         file.close()
         print("User " + username.get() + " created.")
 
+        # Show succes message upon complete registration then destroys register window
         Label(reg_screen, text="Registration Success!", fg="green", font=("calibri", 11)).pack()
         reg_screen.after(1200, lambda: reg_screen.destroy())
 
@@ -76,6 +79,7 @@ def register_screen():
 
 def login_screen():
 
+    # Create login screen
     login_user = Tk()
     login_user.title("Login")
     login_user.geometry("300x290+830+420")
@@ -86,6 +90,7 @@ def login_screen():
     Label(login_user, text="Login", bg="white", font=("verdana", 19)).pack()
     Label(login_user, text="", bg="white").pack()
 
+    # Username Label
     user_label = Label(login_user, text="Username", font=("Times", 13), bg="white")
     user_label.pack()
 
@@ -104,6 +109,8 @@ def login_screen():
     Label(login_user, text="", bg="white", height=1).pack()
 
     def check_user_credentials():
+
+        # check to see if user and pass match ones on file
         username_entry = username_login.get()
         password_entry = password_login.get()
         print(username_entry)

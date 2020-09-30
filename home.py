@@ -7,7 +7,7 @@ import pandas as pd
 
 
 def create_database():
-    # Create a database or connect to one
+    # Create or connect to existing meals database
     conn = sqlite3.connect('meals.db')
     print("Connected to SQLite")
     # Create Cursor
@@ -24,13 +24,15 @@ def create_database():
     conn.commit()
     # Close Connection (optional, will close anyway)
     conn.close()
-
 create_database()
 
 
 def daily_database():
+    # Create or connect to existing daily database
     conn = sqlite3.connect('daily.db')
+    # Create cursor
     c = conn.cursor()
+    # Create Table
     c.execute("""CREATE TABLE IF NOT EXISTS day (
         Meal text,
         Protein real,
@@ -39,28 +41,35 @@ def daily_database():
         Total_Weight int,
         sqltime TEXT DEFAULT (strftime('%Y-%m-%d','now', 'localtime'))
     )""")
+    # Commit changes
     conn.commit()
 daily_database()
 
 
 def macro_database():
+    # Create or Connect to macro database
     conn = sqlite3.connect('macro.db')
+    # Create cursor
     c = conn.cursor()
+    # Create table
     c.execute("""CREATE TABLE IF NOT EXISTS target (
         Protein real,
         Carbs real,
         Fats,
         sqltime TEXT DEFAULT (strftime('%Y-%m-%d','now', 'localtime'))        
     )""")
+    # Commit changes
+    conn.commit()
+macro_database()
 
 
 def gather_data():
     global final_p
     global final_c
     global final_f
-    macro_date = "2020-09-17"
     day = sqlite3.connect('macro.db')
     data = pd.read_sql_query("Select * from target", day)
+    macro_date = data['sqltime'].max()
     data_time = data[data['sqltime'] == macro_date]
     all_info = data_time.sum()
     macro_p = all_info['Protein']
@@ -155,7 +164,7 @@ def success():
     click = value.get()
     alphanumeric = ""
     for character in click:
-        if character.isalnum():
+        if character.isalnum() or " ":
             alphanumeric += character
     m.execute("SELECT * FROM meal WHERE Food = ?", (alphanumeric,))
     all_data = m.fetchall()
@@ -397,5 +406,3 @@ def home_page():
     display_daily_macros()
 
     root.mainloop()
-    root.mainloop()
-home_page()
