@@ -8,12 +8,15 @@ This project differs from mainstream "trackers" as it focuses more on the macros
 
 How does it work?
 
-1. Simply Create/Design your meal in the "Create Meal" section. Here you can specify the type of food alonside it's macros based on it's weight 
+1. Create your meal in the "Create Meal" section. Here you can specify the type of food you want to add alongside it's macros based on it's weight 
 e.g - Chicken Breast,  Total Weight 500g, Protein 100g, Carbohydrates 0g, Fat 5.5g.
 
-2. Now that we've added the a meal you decide you only fancy eating 300g of Chicken Breast today rather than 500g. No trouble we've made this process this easy to change in the "Add Meal" section where you can specificy the total weight and the food - Chicken Breast 300g, and we'll automatically calculate the difference. 
+2. Now a meal is in the database this can be added to your daily intake. The current weight set for Chicken Breast is 500, however, you want to eat 300g today.   
+The weight can be specified in the "Add Meal" alongside the food you're eating, e.g - Chicken Breast 300g. We'll then calculate the total Macros for 300g and add this
+to your daily intake database.
 
-3. Now that you've added to your day you can see your daily macro count so far plus a percentage to goal display to the right handside in the "Daily Information" section. 
+3. Now that you've added to your day you can see your daily macro count so far plus a percentage to goal display to the right handside in the "Daily Information" section.
+   If you would like to check your intake history this can be done by selecting a date on the calender.
 
 Done!
 
