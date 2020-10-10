@@ -4,8 +4,6 @@ This project tracks macro intake. Making it nice and easy to track your day to d
 
 Suitable for anybody who wants to keep track of what they're eating in an easy to view format.
 
-This project differs from mainstream "trackers" as it focuses more on the macros rather than the calorie intake. 
-
 How does it work?
 
 1. Create your meal in the "Create Meal" section. Here you can specify the type of food you want to add alongside it's macros based on it's weight 
