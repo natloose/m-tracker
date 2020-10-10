@@ -24,6 +24,7 @@ Done!
 - Design improvements (GUI python is limited)
 - Impliment Tests where applicable
 - (g) box does not raise an alert if user doesn't input a gram amount, rather just leaves it and returns error on console.
+- Further information could be provided to the user, for example, the actual food they have ate on the selected day.
 
 
 
