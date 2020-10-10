@@ -17,6 +17,12 @@ e.g - Chicken Breast,  Total Weight 500g, Protein 100g, Carbohydrates 0g, Fat 5.
 
 Done!
 
+# What else can be done?
+
+- Individual accounts per user
+- Design improvements (GUI python is limited)
+- Impliment Tests where applicable
+- (g) box does not raise an alert if user doesn't input a gram amount, rather just leaves it and returns error on console.
 
 ![AccountLogin](https://user-images.githubusercontent.com/60553621/93750508-7b270180-fbf3-11ea-958f-8c6ca7953a4f.JPG)
 
