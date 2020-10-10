@@ -16,7 +16,7 @@ to your daily intake database.
 3. Now that you've added to your day you can see your daily macro count so far plus a percentage to goal display to the right handside in the "Daily Information" section.
    If you would like to check your intake history this can be done by selecting a date on the calender.
 
-Done!
+Voila!
 
 ## What else can be done?
 
