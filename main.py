@@ -117,11 +117,11 @@ def login_screen():
         print(username_entry)
         print(password_entry)
 
-        path = "C:/Users/Conor/PCNew/ctimprovements/MacroTracker/Users"
+        path = "C:/Users/Conor/PCNew/ctimprovements/MacroTracker/users"
         list_of_names = os.listdir(path)
         if username_entry in list_of_names:
 
-            file = open("Users/" + username_entry, "r")
+            file = open("users/" + username_entry, "r")
             if password_entry in file:
                 print("User Authenticated")
                 tk.Label(login_user, text="Success!", fg="green").pack()
@@ -239,8 +239,8 @@ def main_screen():
 def success():
     # Create connection & Cursor
 
-    daily = sqlite3.connect('daily.db')
-    meals = sqlite3.connect('meals.db')
+    daily = sqlite3.connect('database/daily.db')
+    meals = sqlite3.connect('database/meals.db')
     m = meals.cursor()
     d = daily.cursor()
     # Read from DB
@@ -309,7 +309,7 @@ def set_macro():
 
 
 def savemacro():
-    conn = sqlite3.connect('macro.db')
+    conn = sqlite3.connect('database/macro.db')
     c = conn.cursor()
     c.execute('INSERT INTO target(Protein,Carbs,Fats) VALUES (?,?,?)',
                   (pro.get(), carb.get(), fats.get()))
@@ -375,7 +375,7 @@ def add_new_meal():
 
     # Submit button
     def savedata():
-        conn = sqlite3.connect('meals.db')
+        conn = sqlite3.connect('database/meals.db')
         c = conn.cursor()
         c.execute('INSERT INTO meal(Food,Protein,Carbs,Fats,Total_Weight) VALUES(?,?,?,?,?)',
                   (item.get(), protein.get(), carbs.get(), fats.get(), grams.get()))
@@ -411,7 +411,7 @@ def display_daily_macros():
     fatss = tk.IntVar()
     date = str(ent.get_date())
 
-    daily = sqlite3.connect('daily.db')
+    daily = sqlite3.connect('database/daily.db')
     data = pd.read_sql_query("Select * from day", daily)
     data_time = data[data['sqltime'] == date]
     all_info = data_time.sum()
@@ -470,7 +470,7 @@ def gather_data():
     global final_f
 
     if prott and carbss and fatss != 0:
-        day = sqlite3.connect('macro.db')
+        day = sqlite3.connect('database/macro.db')
         data = pd.read_sql_query("Select * from target", day)
         macro_date = data['sqltime'].max()
         data_time = data[data['sqltime'] == macro_date]

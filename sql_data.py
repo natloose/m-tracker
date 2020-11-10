@@ -4,7 +4,7 @@ import sqlite3
 class Database:
     def __init__(self):
         # Create or Connect to macro database
-        self.connection = sqlite3.connect('macro.db')
+        self.connection = sqlite3.connect('database/macro.db')
         # Create cursor
         self.cursor = self.connection.cursor()
         # Create table
@@ -18,7 +18,7 @@ class Database:
         self.connection.commit()
 
         # Create or connect to existing daily database
-        self.daily_connection = sqlite3.connect('daily.db')
+        self.daily_connection = sqlite3.connect('database/daily.db')
         # Create cursor
         self.daily_cursor = self.daily_connection.cursor()
         # Create Table
@@ -34,7 +34,7 @@ class Database:
         self.daily_connection.commit()
 
         # Create or connect to existing meals database
-        self.meals_connection = sqlite3.connect('meals.db')
+        self.meals_connection = sqlite3.connect('database/meals.db')
         print("Connected to SQLite")
         # Create Cursor
         self.meals_cursor = self.meals_connection.cursor()
@@ -53,7 +53,7 @@ class Database:
 
 
 def item_list():
-    conn = sqlite3.connect('meals.db')
+    conn = sqlite3.connect('database/meals.db')
     c = conn.cursor()
     items = c.execute("SELECT Food FROM meal")
     food_list = [it[0] for it in items.fetchall()]
