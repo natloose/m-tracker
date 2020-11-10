@@ -1,0 +1,7 @@
+Babel==2.8.0
+numpy==1.19.3
+pandas==1.1.4
+python-dateutil==2.8.1
+pytz==2020.4
+six==1.15.0
+tkcalendar==1.6.1
