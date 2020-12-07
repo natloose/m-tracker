@@ -1,6 +1,7 @@
 # MacroTracker
 
-This project tracks macro intake. Making it nice and easy to track your day to day food consumption. 
+
+This is my first project that tracks macro intake. Making it nice and easy to track your day to day food consumption. 
 
 Suitable for anybody who wants to keep track of what they're eating in an easy to view format.
 
